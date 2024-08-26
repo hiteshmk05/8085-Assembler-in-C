@@ -1,0 +1,102 @@
+MOV A, B	:78	1
+MOV A, C	:79	1
+MOV A, D	:7A	1
+MOV A, E	:7B	1
+MOV A, H	:7C	1
+MOV A, L	:7D	1
+MOV A, M	:7E	1
+MOV B, A	:4F	1
+MOV B, C	:41	1
+MOV B, D	:42	1
+MOV B, E	:43	1
+MOV B, H	:44	1
+MOV B, L	:45	1
+MOV B, M	:46	1
+MOV C, A	:4F	1
+MOV C, B	:49	1
+MOV C, D	:4A	1
+MOV C, E	:4B	1
+MOV C, H	:4C	1
+MOV C, L	:4D	1
+MOV C, M	:4E	1
+MVI A, 	    :3E 2
+MVI B, 	    :06 2
+MVI C, 	    :0E 2
+MVI D, 	    :16 2
+MVI E, 	    :1E 2
+MVI H, 	    :26 2
+MVI L, 	    :2E 2
+MVI M, 	    :36 2
+LDA 	    :FA 3
+STA 	    :32 3
+LHLD 	    :2A 3
+SHLD 	    :22 3
+ADD B	    :80	1
+ADD C	    :81	1
+ADD D	    :82	1
+ADD E	    :83	1
+ADD H	    :84	1
+ADD L	    :85	1
+ADD M	    :86	1
+ADC B	    :88	1
+ADC C	    :89	1
+ADC D	    :8A	1
+ADC E	    :8B	1
+ADC H	    :8C	1
+ADC L	    :8D	1
+ADC M	    :8E	1
+SUB B	    :90	1
+SUB C	    :91	1
+SUB D	    :92	1
+SUB E	    :93	1
+SUB H	    :94	1
+SUB L	    :95	1
+SUB M	    :96	1
+SBB B	    :98	1
+SBB C	    :99	1
+SBB D	    :9A	1
+SBB E	    :9B	1
+SBB H	    :9C	1
+SBB L	    :9D	1
+SBB M	    :9E	1
+INR A	    :3C	1
+INR B	    :04	1
+INR C	    :0C	1
+INR D	    :14	1
+INR E       :1C	1
+INR H	    :24	1
+INR L	    :2C	1
+INR M	    :34	1
+DCR A	    :3D	1
+DCR B	    :05	1
+DCR C	    :0D	1
+DCR D	    :15	1
+DCR E	    :1D	1
+DCR H	    :25	1
+DCR L	    :2D	1
+DCR M	    :35	1
+ANI 	    :E6 2
+ORI         :F6 2
+XRI         :EE 2
+CMA	        :2F	1
+CMC	        :3F	1
+STC	        :37	1
+RLC	        :07	1
+RRC	        :0F	1
+RAL	        :17	1
+RAR	        :1F	1
+CPO         :E3 3
+CPE         :E4 3
+JMP         :C3 3
+JC          :DA 3
+JNC 	    :D2 3
+JZ  	    :CA 3
+JNZ         :C2 3
+CALL        :CD 3
+RET	        :C9	1
+NOP	        :00 1
+HLT	        :76 1
+DI	        :F3 1
+EI	        :FB 1
+RIM	        :20 1
+SIM	        :30 1
