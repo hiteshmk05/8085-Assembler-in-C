@@ -70,7 +70,7 @@ int main(int argc,char* argv[]){
     parsed_asm=(data_vector*)malloc(file_lines*sizeof(data_vector));
     parse_assembly(&hashmap,file_vector,file_lines);
 
-    FILE* assembled_file=fopen(argv[2],"a");
+    FILE* assembled_file=fopen(argv[2],"w");
     
     second_pass(assembled_file,argv[2]);
     
@@ -97,7 +97,7 @@ void parse_assembly(map* hashmap,string_vector* file_vector,size_t file_lines){
         }
 
         char label[20];
-        char mnumeniic[10];
+        char mnumeniic[20];
 
         if(strchr(line,':')){
             char* colon_position=strchr(line,':');
@@ -109,7 +109,7 @@ void parse_assembly(map* hashmap,string_vector* file_vector,size_t file_lines){
 
             strcpy(symbol_table[symbol_index].label,label);
 
-            char hex_string[5];
+            char hex_string[20];
             decimal_to_hex(location_counter,hex_string);
 
             strcpy(symbol_table[symbol_index].address,hex_string);
@@ -123,7 +123,6 @@ void parse_assembly(map* hashmap,string_vector* file_vector,size_t file_lines){
         }else{
             strcpy(mnumeniic,line);
         }
-
         if(is_string_empty(mnumeniic)==0){
             int increment_by=first_pass(mnumeniic,hashmap);
             location_counter+=increment_by;
@@ -172,10 +171,9 @@ int first_pass(const char* instruction,map* hashmap){
 
 void second_pass(FILE* assembled_file,const char* filename){
     for (int i=0 ;i<parsed_index;i++) {
-        char buffer[10];
+        char buffer[20];
 
         strcpy(buffer,parsed_asm[i].instruction+parsed_asm[i].traversed);
-        
         fprintf(assembled_file,parsed_asm[i].opcode);
         fprintf(assembled_file,"\n");
 
