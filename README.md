@@ -3,7 +3,9 @@ run in terminal
 gcc assembler.c preprocessing.c hashmap.c string_vector.c -o assembler.exe
 <br>
 powershell script
+<br>
 ./assembler (path to assembly_code) (destination for assembler output)
 <br>
 cmd script
+<br>
 assembler.exe (path to assembly_code) (destination for assembler output)
