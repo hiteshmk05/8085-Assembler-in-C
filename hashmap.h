@@ -2,6 +2,8 @@
 #define HASHMAP_H
 #define MAP_SIZE 103
 
+
+
 typedef struct node{
     char instruction[20];
     struct node* next; 

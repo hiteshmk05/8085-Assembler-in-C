@@ -16,7 +16,7 @@ void insert_map(map* hashmap,char* instruction){
     strcpy(new_node->instruction,instruction);
     
     new_node->next=NULL;
-    new_node->instruction[sizeof(new_node->instruction)]='\0';
+    new_node->instruction[sizeof(new_node->instruction) - 1]='\0';
 
     if(hashmap->bucket[hash_value]==NULL){
 
