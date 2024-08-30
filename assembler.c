@@ -236,7 +236,7 @@ int hex_to_decimal(const char* hex_string){
 }
 
 void decimal_to_hex(int decimal_number,char* hex_string){
-    sprintf(hex_string,"%X",decimal_number);
+    sprintf(hex_string,"%04X",decimal_number);
 }   
 
 int is_string_empty(const char* str){
