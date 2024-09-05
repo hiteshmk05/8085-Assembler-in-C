@@ -1,8 +1,8 @@
 ***
-###run in terminal
+#run in terminal
 <br>
 gcc assembler.c preprocessing.c hashmap.c string_vector.c -o assembler.exe
-***
+
 <br>
 ###powershell script
 <br>
