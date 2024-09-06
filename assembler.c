@@ -93,7 +93,7 @@ void parse_assembly(map* hashmap,string_vector* file_vector,size_t file_lines){
             starting_address[len-1]='\0';
             location_counter=hex_to_decimal(starting_address);
 
-            goto last;
+            continue;
         }
 
         char label[20];
@@ -127,7 +127,7 @@ void parse_assembly(map* hashmap,string_vector* file_vector,size_t file_lines){
             int increment_by=first_pass(mnumeniic,hashmap);
             location_counter+=increment_by;
         }
-        last:
+        
     }
 
 }
@@ -178,7 +178,7 @@ void second_pass(FILE* assembled_file,const char* filename){
         fprintf(assembled_file,"\n");
 
         if(is_string_empty(buffer)){
-            goto last;
+            continue;
         }
 
         size_t len=strlen(buffer);
@@ -225,9 +225,6 @@ void second_pass(FILE* assembled_file,const char* filename){
             }
 
         }
-
-        last:
-
     }
 }
 
